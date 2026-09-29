@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ФГН НаУКМА</title>
+</head>
+<body>
+<header>
+    <a href="{% url 'index' %}">Головна</a>
+    <a href="/departments/">Кафедри</a>
+    <a href="/programs/">Спеціальності</a>
+</header>
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+
+<footer>
+    Факультет гуманітарних наук НаУКМА
+</footer>
+</body>
+</html>
