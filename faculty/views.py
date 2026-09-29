@@ -14,12 +14,13 @@ def programs(request):
 
 
 def program(request, program_id):
-    try:
-        program = Program.objects.get(pk=program_id)
-    except Program.DoesNotExist:
-        raise Http404("Спеціальність не знайдено")
+    program = Program.objects.get(pk=program_id)
     return render(request, 'faculty/program.html', {'program': program})
 
 def departments(request):
     all_departments = Department.objects.all()
     return render(request, 'faculty/departments.html', {'departments': all_departments})
+
+def department(request, department_id):
+    department = Department.objects.get(pk=department_id)
+    return render(request, 'faculty/department.html', {'department': department})

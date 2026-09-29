@@ -1,0 +1,18 @@
+{% extends 'faculty/base.html' %}
+
+{% block content %}
+<h1>{{ department.name }}</h1>
+<p>Завідувач: {{ department.head }}</p>
+<p>Випускова для:
+{% for program in department.programs.all %}
+    {{ program.name }}
+{% endfor %}
+</p>
+
+<h2>Викладачі</h2>
+<ul>
+    {% for teacher in department.teachers.all %}
+    <li>{{ teacher.name }} - {{ teacher.position }}{% if teacher.degree %}, {{ teacher.degree }}{% endif %}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
