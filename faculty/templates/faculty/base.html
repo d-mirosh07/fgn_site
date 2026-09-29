@@ -8,7 +8,7 @@
 <header>
     <a href="{% url 'index' %}">Головна</a>
     <a href="/departments/">Кафедри</a>
-    <a href="/programs/">Спеціальності</a>
+    <a href="{% url 'programs' %}">Спеціальності</a>
 </header>
 <main>
     {% block content %}{% endblock %}

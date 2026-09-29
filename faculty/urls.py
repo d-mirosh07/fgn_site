@@ -3,4 +3,5 @@ from faculty import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('programs/', views.programs, name='programs'),
 ]
