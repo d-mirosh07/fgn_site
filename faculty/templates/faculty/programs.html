@@ -4,7 +4,7 @@
 <h1>Спеціальності</h1>
 
 {% for program in programs %}
-    <h2>{{ program.code }} {{ program.name }}</h2>
+        <h2>{{ program.code }} <a href="{% url 'program' program.id %}">{{ program.name }}</a></h2>
     <p>{{ program.description|truncatewords:50 }}</p>
     <p>Координатор набору: {{ program.coordinator_name }}, {{ program.coordinator_contact }}</p>
 {% endfor %}
