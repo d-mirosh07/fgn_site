@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from faculty.models import FacultyInfo, Program, Department
-from django.http import Http404
+from faculty.models import FacultyInfo, Program, Department ,ExchangeProgram
+
 
 
 def index(request):
@@ -24,3 +24,7 @@ def departments(request):
 def department(request, department_id):
     department = Department.objects.get(pk=department_id)
     return render(request, 'faculty/department.html', {'department': department})
+
+def exchange(request):
+    all_exchange = ExchangeProgram.objects.all()
+    return render(request, 'faculty/exchange.html', {'exchange_programs': all_exchange})

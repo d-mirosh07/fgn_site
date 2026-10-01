@@ -1,6 +1,5 @@
-from tkinter.constants import CASCADE
 from django.db import models
-from django.db.models.fields import TextField, related, EmailField
+
 
 
 class Department(models.Model):
@@ -45,3 +44,14 @@ class FacultyInfo(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ExchangeProgram(models.Model):
+    university=models.CharField(max_length=200)
+    languages = models.CharField(max_length=200)
+    places = models.CharField(max_length=50)
+    deadline = models.DateField()
+    description = models.TextField()
+
+    def __str__(self):
+        return self.university
