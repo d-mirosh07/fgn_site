@@ -10,6 +10,11 @@
         <p><b>Мови навчання:</b> {{ program.languages }}</p>
         <p><b>Кількість місць:</b> {{ program.places }}</p>
         <p><b>Дедлайн подачі:</b> {{ program.deadline|date:"d.m.Y" }}</p>
+        {% if program.deadline >= today %}
+            <p><b>Прийом триває</b></p>
+        {% else %}
+            <p><b>Прийом завершено</b></p>
+        {% endif %}
         <p>{{ program.description }}</p>
     </div>
 {% endfor %}

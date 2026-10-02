@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from faculty.models import FacultyInfo, Program, Department ,ExchangeProgram
-
+from datetime import date
 
 
 def index(request):
@@ -27,4 +27,5 @@ def department(request, department_id):
 
 def exchange(request):
     all_exchange = ExchangeProgram.objects.all()
-    return render(request, 'faculty/exchange.html', {'exchange_programs': all_exchange})
+    today = date.today()
+    return render(request, 'faculty/exchange.html', {'exchange_programs': all_exchange, 'today': today})
