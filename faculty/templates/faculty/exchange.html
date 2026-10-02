@@ -6,6 +6,7 @@
 {% for program in exchange_programs %}
     <div class="card">
         <h2>{{ program.university }}</h2>
+        <p><b>Країна:</b> {{ program.country }}</p>
         <p><b>Мови навчання:</b> {{ program.languages }}</p>
         <p><b>Кількість місць:</b> {{ program.places }}</p>
         <p><b>Дедлайн подачі:</b> {{ program.deadline|date:"d.m.Y" }}</p>

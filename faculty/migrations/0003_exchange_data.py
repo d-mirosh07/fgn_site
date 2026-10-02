@@ -12,16 +12,7 @@ INSERT INTO faculty_exchangeprogram (university, languages, places, deadline, de
 ('Masaryk University, Чехія', 'англійська', '1 місце', '2026-09-30', 'Університет у Брно. Має англомовні курси з історії та мистецтва.');
 """
 
-REVERSE_SQL = """
-DELETE FROM faculty_exchangeprogram WHERE university IN (
-'Uniwersytet Warszawski, Польща',
-'KU Leuven (Бельгія)',
-'Vilnius University, Литва',
-'Uniwersytet Jagielloński, Польща',
-'University of Tartu - Естонія',
-'Masaryk University, Чехія'
-);
-"""
+REVERSE_SQL = "DELETE FROM faculty_exchangeprogram;"
 
 
 class Migration(migrations.Migration):
