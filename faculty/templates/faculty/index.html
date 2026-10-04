@@ -1,12 +1,10 @@
-{% extends 'faculty/base.html' %}
+{% extends "faculty/base.html" %}
 {% block content %}
-<h1>{{ info.title }}</h1>
-
-<h2>Про факультет</h2>
-{{ info.description|linebreaks }}
-
-<h2>Контакти</h2>
-<p>Адреса: {{ info.address }}</p>
-<p>Телефон: {{ info.phone }}</p>
-<p>Email: {{ info.email }}</p>
+  <h1>{{ info.title }}</h1>
+  <h2>Про факультет</h2>
+  {{ info.description|linebreaks }}
+  <h2>Контакти</h2>
+  <p>Адреса: {{ info.address }}</p>
+  <p>Телефон: {{ info.phone }}</p>
+  <p>Email: {{ info.email }}</p>
 {% endblock %}

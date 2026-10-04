@@ -1,25 +1,23 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="uk">
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>ФГН НаУКМА</title>
     <link rel="stylesheet" href="{% static 'faculty/style.css' %}">
-</head>
-<body>
-<header>
-    <a href="{% url 'index' %}">Головна</a>
-    <a href="{% url 'departments' %}">Кафедри</a>
-    <a href="{% url 'programs' %}">Спеціальності</a>
-    <a href="{% url 'exchange' %}">Обмін</a>
-</header>
-<main>
-    {% block content %}{% endblock %}
-</main>
-
-
-<footer>
-    Факультет гуманітарних наук НаУКМА
-</footer>
-</body>
+  </head>
+  <body>
+    <header>
+      <a href="{% url 'index' %}">Головна</a>
+      <a href="{% url 'departments' %}">Кафедри</a>
+      <a href="{% url 'programs' %}">Спеціальності</a>
+      <a href="{% url 'exchange' %}">Обмін</a>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    <footer>
+      Факультет гуманітарних наук НаУКМА
+    </footer>
+  </body>
 </html>
