@@ -9,6 +9,9 @@
         Випускова для:
         {% for program in department.programs.all %}
           <a href="{% url 'program' program.id %}">{{ program.name }}</a>
+          {% if not forloop.last %},{% endif %}
+        {% empty %}
+          -
         {% endfor %}
       </p>
     </div>
