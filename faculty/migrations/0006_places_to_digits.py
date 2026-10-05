@@ -17,9 +17,9 @@ class Migration(migrations.Migration):
     dependencies = [
         ("faculty", "0005_split_university"),
     ]
-    # Відкат не відновлює формат: "KU Leuven (Бельгія)" і "University of Tartu - Естонія" стануть
-    # "KU Leuven, Бельгія" і "University of Tartu, Естонія",
-    # бо вже не можна дізнатися, де були дужки чи тире.
+
+    # Відкат не відновлює текст: "2 місця", "до 4", "1 місце" стали просто "2", "4", "1",
+    # і з числа вже не можна дізнатися, які слова там були. Саме тому ому reverse_code = noop.
     operations = [
         migrations.RunPython(places_to_digits, reverse_code=migrations.RunPython.noop),
     ]
