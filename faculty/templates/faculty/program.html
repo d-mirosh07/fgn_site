@@ -1,0 +1,12 @@
+{% extends "faculty/base.html" %}
+{% block content %}
+  <p>{{ program.code }}</p>
+  <h1>{{ program.name }}</h1>
+  <h2>Опис</h2>
+  {{ program.description|linebreaks }}
+  <h2>Координатор набору</h2>
+  <p>{{ program.coordinator_name }}, {{ program.coordinator_contact }}</p>
+  <p>Випускова кафедра: {{ program.department.name }}</p>
+  <h2>Дисципліни</h2>
+  <p>{{ program.disciplines|linebreaksbr }}</p>
+{% endblock %}

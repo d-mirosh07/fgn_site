@@ -1,0 +1,24 @@
+{% extends "faculty/base.html" %}
+{% block content %}
+  <h1>{{ info.title }}</h1>
+  <h2>Про факультет</h2>
+  {{ info.description|linebreaks }}
+  {% if info.leadership %}
+    <h2>Керівництво</h2>
+    {{ info.leadership|linebreaks }}
+  {% endif %}
+  <h2>Контакти</h2>
+  <p>Адреса: {{ info.address }}</p>
+  <p>Телефон: {{ info.phone }}</p>
+  <p>Email: {{ info.email }}</p>
+  {% if info.instagram %}
+    <p>
+      <a href="{{ info.instagram }}">Instagram</a>
+    </p>
+  {% endif %}
+  {% if info.facebook %}
+    <p>
+      <a href="{{ info.facebook }}">Facebook</a>
+    </p>
+  {% endif %}
+{% endblock %}
